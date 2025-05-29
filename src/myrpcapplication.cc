@@ -3,6 +3,11 @@
 #include<unistd.h>
 #include<string>
 
+//初始化成员变量
+//静态成员变量在类外初始化的时候也不需要加staatic：
+//在.h中声明的在这里实现的时候需要添加作用域
+MyrpcConfig MyrpcApplication::m_config;  
+
 void ShowArgsHelp(){
     std::cout<<"format: command -i <configfile>"<<std::endl;
 }
