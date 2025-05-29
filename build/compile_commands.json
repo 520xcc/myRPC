@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/xcc/myRPC/build/src",
+  "command": "/usr/bin/g++ -Dmyrpc_EXPORTS -I/home/xcc/myRPC/src/include -I/home/xcc/myRPC/example -g -fPIC -o CMakeFiles/myrpc.dir/myrpcapplication.cc.o -c /home/xcc/myRPC/src/myrpcapplication.cc",
+  "file": "/home/xcc/myRPC/src/myrpcapplication.cc"
+},
+{
+  "directory": "/home/xcc/myRPC/build/src",
+  "command": "/usr/bin/g++ -Dmyrpc_EXPORTS -I/home/xcc/myRPC/src/include -I/home/xcc/myRPC/example -g -fPIC -o CMakeFiles/myrpc.dir/rpcprovider.cc.o -c /home/xcc/myRPC/src/rpcprovider.cc",
+  "file": "/home/xcc/myRPC/src/rpcprovider.cc"
+},
+{
+  "directory": "/home/xcc/myRPC/build/example/callee",
+  "command": "/usr/bin/g++  -I/home/xcc/myRPC/src/include -I/home/xcc/myRPC/example -g -o CMakeFiles/provider.dir/userservice.cc.o -c /home/xcc/myRPC/example/callee/userservice.cc",
+  "file": "/home/xcc/myRPC/example/callee/userservice.cc"
+},
+{
+  "directory": "/home/xcc/myRPC/build/example/callee",
+  "command": "/usr/bin/g++  -I/home/xcc/myRPC/src/include -I/home/xcc/myRPC/example -g -o CMakeFiles/provider.dir/__/user.pb.cc.o -c /home/xcc/myRPC/example/user.pb.cc",
+  "file": "/home/xcc/myRPC/example/user.pb.cc"
+}
+]

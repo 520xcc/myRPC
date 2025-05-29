@@ -1,0 +1,5 @@
+#当前目录下的所有源文件
+aux_source_directory(. SRC_LIST)
+#编译成library
+add_library(myrpc SHARED ${SRC_LIST})
+

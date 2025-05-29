@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package fixbug;
+
+option cc_generic_services = true;//加一个option，否则后面生成不了服务service类
+
+
+message ResultCode{
+    int32 errcode = 1;
+    bytes errmsg = 2;
+}
+
+message LoginRequest//参数类型
+{
+    bytes name = 1;
+    bytes pwd = 2;
+}
+
+message LoginResponse//返回值类型
+{
+    ResultCode result = 1;
+    bool success = 2;
+}
+
+service UserServiceRpc
+{
+    rpc Login(LoginRequest) returns(LoginResponse);//函数方法描述
+}
