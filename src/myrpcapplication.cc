@@ -48,11 +48,11 @@ void MyrpcApplication::Init(int argc,  char **argv)//类外实现静态方法不
     //开始加载配置文件了（有专门的模块）rpcserver_ip=  rpcserver_port  zookeeper_ip=  zookeeper_port=  
     m_config.LoadConfigFile(config_file.c_str());
 
-    //补充：打印看下有没有错
-    std::cout<<"rpcserverip:"<<m_config.Load("rpcserverip");
-    std::cout<<"rpcserverport:"<<m_config.Load("rpcserverport");
-    std::cout<<"zookeeperip:"<<m_config.Load("zookeeperip");
-    std::cout<<"zookeeperport:"<<m_config.Load("zookeeperport");
+    // //补充：打印看下有没有错
+    // std::cout<<"rpcserverip:"<<m_config.Load("rpcserverip")<<std::endl;
+    // std::cout<<"rpcserverport:"<<m_config.Load("rpcserverport")<<std::endl;
+    // std::cout<<"zookeeperip:"<<m_config.Load("zookeeperip")<<std::endl;
+    // std::cout<<"zookeeperport:"<<m_config.Load("zookeeperport")<<std::endl;
 }
 
 MyrpcApplication& MyrpcApplication::GetInstance()  //定义唯一的实例
@@ -60,3 +60,7 @@ MyrpcApplication& MyrpcApplication::GetInstance()  //定义唯一的实例
     static MyrpcApplication app;
     return app;
 } 
+
+MyrpcConfig& MyrpcApplication::GetConfig(){
+    return m_config;
+}

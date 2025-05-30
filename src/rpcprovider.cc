@@ -1,4 +1,8 @@
 #include "include/rpcprovider.h"
+#include<string>
+//#include <cstdint>
+#include"include/myrpcapplication.h"
+#include<functional>
 
 //这是框架提供给外部使用的，可以发布rpc方法的函数接口
 void RpcProvider::NotifyService(google::protobuf::Service *service)
@@ -9,5 +13,21 @@ void RpcProvider::NotifyService(google::protobuf::Service *service)
 //启动rpc服务节点，开始提供rpc远程网络调用服务
 void RpcProvider::Run()
 {
+    std::string ip = MyrpcApplication::GetInstance().GetConfig().Load("rpcserverip");
+    uint16_t port = atoi(MyrpcApplication::GetInstance().GetConfig().Load("rpcserverport").c_str());
+    muduo::net::InetAddress address();
+
+    //创建Tcpserver对象
+    muduo::net::TcpServer server(&m_eventloop, address, "RpcProvider");
+    //绑定连接回调和消息读写回调
+    server.setConnectionCallback(std::bind(&RpcProvider::onConnection, this, std::placeholders::_1));
+    server.setMessageCallback();
+
+    //设置muduo库的线程数量
+    server.setThreadNum(4);//自己设置：电脑设置的是4核，这样可以一个线程用于io线程，剩下的是工作线程
+}
+
+//新的socket连接回调
+void RpcProvider::onConnection(const TcpConnectionPtr &conn){
 
 }

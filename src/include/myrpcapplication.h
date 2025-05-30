@@ -8,6 +8,7 @@ class MyrpcApplication
 public:
     static void Init(int argc,  char **argv);
     static MyrpcApplication& GetInstance();  //定义唯一的实例
+    static MyrpcConfig& GetConfig();//提供给别人获取配置
     // {
     //     static MyrpcApplication app;
     //     return app;

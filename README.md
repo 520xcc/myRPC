@@ -4,7 +4,6 @@
 第二步：写main.cc
 文件目录下运行：g++ *.cc -lprotobuf
 
-![alt text](image.png)
 
 代码框架\
 ![alt text](image-1.png)\
