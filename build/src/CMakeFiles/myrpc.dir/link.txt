@@ -1,1 +1,1 @@
-/usr/bin/g++ -fPIC -g -shared -Wl,-soname,libmyrpc.so -o ../../lib/libmyrpc.so CMakeFiles/myrpc.dir/myrpcapplication.cc.o CMakeFiles/myrpc.dir/rpcprovider.cc.o   -L/home/xcc/myRPC/lib 
+/usr/bin/g++ -fPIC -g -shared -Wl,-soname,libmyrpc.so -o ../../lib/libmyrpc.so CMakeFiles/myrpc.dir/myrpcapplication.cc.o CMakeFiles/myrpc.dir/myrpcconfig.cc.o CMakeFiles/myrpc.dir/rpcprovider.cc.o   -L/home/xcc/myRPC/lib 

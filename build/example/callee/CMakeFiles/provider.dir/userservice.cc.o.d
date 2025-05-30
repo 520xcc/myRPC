@@ -287,4 +287,5 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: \
  /usr/local/include/google/protobuf/extension_set.h \
  /usr/include/c++/11/cassert /usr/local/include/google/protobuf/service.h \
  /home/xcc/myRPC/src/include/myrpcapplication.h \
+ /home/xcc/myRPC/src/include/myrpcconfig.h \
  /home/xcc/myRPC/src/include/rpcprovider.h

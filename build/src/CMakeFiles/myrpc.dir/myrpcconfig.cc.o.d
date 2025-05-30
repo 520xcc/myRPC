@@ -1,6 +1,5 @@
-src/CMakeFiles/myrpc.dir/myrpcapplication.cc.o: \
- /home/xcc/myRPC/src/myrpcapplication.cc /usr/include/stdc-predef.h \
- /home/xcc/myRPC/src/include/myrpcapplication.h \
+src/CMakeFiles/myrpc.dir/myrpcconfig.cc.o: \
+ /home/xcc/myRPC/src/myrpcconfig.cc /usr/include/stdc-predef.h \
  /home/xcc/myRPC/src/include/myrpcconfig.h \
  /usr/include/c++/11/unordered_map /usr/include/c++/11/type_traits \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -160,11 +159,4 @@ src/CMakeFiles/myrpc.dir/myrpcapplication.cc.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h
+ /usr/include/c++/11/bits/istream.tcc
