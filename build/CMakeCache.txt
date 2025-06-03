@@ -217,6 +217,9 @@ myRPC_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 myRPC_SOURCE_DIR:STATIC=/home/xcc/myRPC
 
+//Dependencies for the target
+myrpc_LIB_DEPENDS:STATIC=general;muduo_net;general;muduo_base;general;pthread;
+
 
 ########################
 # INTERNAL cache entries

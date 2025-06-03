@@ -1,17 +1,17 @@
 [
 {
   "directory": "/home/xcc/myRPC/build/src",
-  "command": "/usr/bin/g++ -Dmyrpc_EXPORTS -I/home/xcc/myRPC/src/include -I/home/xcc/myRPC/example -g -fPIC -o CMakeFiles/myrpc.dir/myrpcapplication.cc.o -c /home/xcc/myRPC/src/myrpcapplication.cc",
+  "command": "/usr/bin/g++  -I/home/xcc/myRPC/src/include -I/home/xcc/myRPC/example -g -o CMakeFiles/myrpc.dir/myrpcapplication.cc.o -c /home/xcc/myRPC/src/myrpcapplication.cc",
   "file": "/home/xcc/myRPC/src/myrpcapplication.cc"
 },
 {
   "directory": "/home/xcc/myRPC/build/src",
-  "command": "/usr/bin/g++ -Dmyrpc_EXPORTS -I/home/xcc/myRPC/src/include -I/home/xcc/myRPC/example -g -fPIC -o CMakeFiles/myrpc.dir/myrpcconfig.cc.o -c /home/xcc/myRPC/src/myrpcconfig.cc",
+  "command": "/usr/bin/g++  -I/home/xcc/myRPC/src/include -I/home/xcc/myRPC/example -g -o CMakeFiles/myrpc.dir/myrpcconfig.cc.o -c /home/xcc/myRPC/src/myrpcconfig.cc",
   "file": "/home/xcc/myRPC/src/myrpcconfig.cc"
 },
 {
   "directory": "/home/xcc/myRPC/build/src",
-  "command": "/usr/bin/g++ -Dmyrpc_EXPORTS -I/home/xcc/myRPC/src/include -I/home/xcc/myRPC/example -g -fPIC -o CMakeFiles/myrpc.dir/rpcprovider.cc.o -c /home/xcc/myRPC/src/rpcprovider.cc",
+  "command": "/usr/bin/g++  -I/home/xcc/myRPC/src/include -I/home/xcc/myRPC/example -g -o CMakeFiles/myrpc.dir/rpcprovider.cc.o -c /home/xcc/myRPC/src/rpcprovider.cc",
   "file": "/home/xcc/myRPC/src/rpcprovider.cc"
 },
 {

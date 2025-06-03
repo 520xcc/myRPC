@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
+  "../../lib/libmyrpc.a"
   "../../lib/libmyrpc.pdb"
-  "../../lib/libmyrpc.so"
   "CMakeFiles/myrpc.dir/myrpcapplication.cc.o"
   "CMakeFiles/myrpc.dir/myrpcapplication.cc.o.d"
   "CMakeFiles/myrpc.dir/myrpcconfig.cc.o"

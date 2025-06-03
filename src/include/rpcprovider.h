@@ -5,6 +5,7 @@
 #include<muduo/net/EventLoop.h>
 #include<muduo/net/InetAddress.h>
 #include<muduo/net/TcpConnection.h>
+
 //框架提供的专门服务发布的rpc服务的网络对象类
 class RpcProvider{
 public:
@@ -19,8 +20,10 @@ private:
     //std::unique_ptr<muduo::net::TcpServer> m_tcpserverptr;
     //组合Eventloop
     muduo::net::EventLoop m_eventloop;
+
     //新的socket连接回调
-    void onConnection(const TcpConnectionPtr&);
-    //一建立连接用户的读写事件回调
-    void (const TcpConnectionPtr&, Buffer*, Timestamp)
+    void onConnection(const muduo::net::TcpConnectionPtr&);
+
+    //已建立连接用户的读写事件回调
+    void onMessage(const muduo::net::TcpConnectionPtr&, muduo::net::Buffer*, muduo::Timestamp);
 };
