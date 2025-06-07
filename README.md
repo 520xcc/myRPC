@@ -17,12 +17,18 @@
 
 # 项目创建思路
 ### 第一步：`example目录`下写user.proto
+
+```bash
 文件目录下运行：protoc user.proto --cpp_out=./
+```
 会生成user.pb.h和user.pb.cc
 (提供google::protobuf::Servie服务抽象类)
 
 ### 第二步：`callee目录`下写userservice.cc
+
+```bash
 文件目录下运行：g++ *.cc -lprotobuf
+```
 
 ### 第三步：`src目录`下写服务提供者的框架代码
 
