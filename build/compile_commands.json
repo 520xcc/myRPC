@@ -11,6 +11,11 @@
 },
 {
   "directory": "/home/xcc/myRPC/build/src",
+  "command": "/usr/bin/g++  -I/home/xcc/myRPC/src/include -I/home/xcc/myRPC/example -g -o CMakeFiles/myrpc.dir/rpcheader.pb.cc.o -c /home/xcc/myRPC/src/rpcheader.pb.cc",
+  "file": "/home/xcc/myRPC/src/rpcheader.pb.cc"
+},
+{
+  "directory": "/home/xcc/myRPC/build/src",
   "command": "/usr/bin/g++  -I/home/xcc/myRPC/src/include -I/home/xcc/myRPC/example -g -o CMakeFiles/myrpc.dir/rpcprovider.cc.o -c /home/xcc/myRPC/src/rpcprovider.cc",
   "file": "/home/xcc/myRPC/src/rpcprovider.cc"
 },
