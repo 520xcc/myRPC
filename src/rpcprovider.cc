@@ -5,6 +5,7 @@
 service_name => service描述
                            =>service* 记录服务对象
                            =>method_name => method方法对象
+        servicemap{service_name->serviceDesc<service*, method_name->method>}
 */
 //这是框架提供给外部使用的，可以发布rpc方法的函数接口
 void RpcProvider::NotifyService(google::protobuf::Service *service)
@@ -20,7 +21,7 @@ void RpcProvider::NotifyService(google::protobuf::Service *service)
     int methodCnt = pserviceDesc->method_count();
 
     //打印信息
-    std::cout<<"service_name:"<< service_name<<std::endl;
+    std::cout<<"service_name:"<< service_name <<std::endl;
 
     for(int i = 0; i < methodCnt; ++i){
         //获取了服务对象指定下标的服务方法的描述（抽象描述）
@@ -142,11 +143,15 @@ void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr &conn,
     google::protobuf::Service *service = it->second.m_service;
     //取method对象 
     const google::protobuf::MethodDescriptor *method = mit->second;
+
+
+
+
     //反序列化结束后获取了服务对象和方法，现在需要调用服务，调用的是发布者提供的逻辑
     //生成rpc方法调用的请求request和响应的response参数
     google::protobuf::Message *request = service->GetRequestPrototype(method).New();
     if(!request->ParseFromString(args_str)){
-        std::cout << "request parse error! content:" <<args_str <<std::endl;
+        std::cout << "request parse error! content:" << args_str <<std::endl;
         return;
     }//解析请求
     google::protobuf::Message *response = service->GetResponsePrototype(method).New();
@@ -168,6 +173,14 @@ void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr &conn,
 }
 
 //Closure回调操作，用于序列化RPC的响应和网络发送
-void RpcProvider::sendRpcResponse(const muduo::net::TcpConnectionPtr&, google::protobuf::Message*){
-    
+void RpcProvider::sendRpcResponse(const muduo::net::TcpConnectionPtr& conn, google::protobuf::Message* response){
+    std::string response_str;
+    if(response->SerializeToString(&response_str))//response进行序列化
+    {
+        //序列化成功后，通过网络将rpc执行结果响应发送给rpc调用方
+        conn->send(response_str);
+    }else{
+        std::cout << "serialize response_str error!" << std::endl;
+    }
+    conn->shutdown();//模拟http短链接。有rpcprovider主动断开连接
 }
