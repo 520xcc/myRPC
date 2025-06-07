@@ -52,7 +52,7 @@ void RpcProvider::Run()
     server.setConnectionCallback(std::bind(&RpcProvider::onConnection, this, std::placeholders::_1));//预留参数位置
     //读写
     server.setMessageCallback(std::bind(&RpcProvider::onMessage, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
-
+ 
     //设置muduo库的线程数量
     server.setThreadNum(4);//自己设置：电脑设置的是4核，这样可以一个线程用于io线程，剩下的是工作线程
 
@@ -143,9 +143,7 @@ void RpcProvider::onMessage(const muduo::net::TcpConnectionPtr &conn,
     google::protobuf::Service *service = it->second.m_service;
     //取method对象 
     const google::protobuf::MethodDescriptor *method = mit->second;
-
-
-
+    
 
     //反序列化结束后获取了服务对象和方法，现在需要调用服务，调用的是发布者提供的逻辑
     //生成rpc方法调用的请求request和响应的response参数
